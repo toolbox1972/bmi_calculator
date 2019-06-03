@@ -1,0 +1,108 @@
+
+body {
+  background-color: transparent;
+  margin: 0;
+}
+
+/*
+---------------------------
+ Grid
+---------------------------
+*/
+
+.wrapper {
+    width: 400px;
+  display: grid;
+  grid-template:
+  "header-1" 50px
+  "content" 400px
+  "footer" 60px
+  /1fr;
+}
+
+.header-1 {grid-area: header-1;}
+.content {grid-area: content;}
+.footer {grid-area: footer;}
+
+.header-1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 150%;
+}
+
+/*
+---------------------------
+ Grid
+---------------------------
+*/
+
+.content {
+  display: grid;
+  grid-template:
+  "area-1 bmi-result" 50px
+  "area-2 bmi-result" 50px
+  "area-3 bmi-result" 50px
+  "area-4 area-4" 300px
+  /40% 70%;
+}
+
+.area-1 {grid-area: area-1;}
+.area-2 {grid-area: area-2;}
+.area-3 {grid-area: area-3;}
+.area-4 {grid-area: area-4;}
+.bmi-result {grid-area: bmi-result;}
+
+.area-1,
+.area-2,
+.area-3 {
+    padding: 30px 0px 0px 30px;
+}
+
+.area-4 {
+    margin: 100px 0px 0px 40px;
+}
+
+.bmi-result {
+    font-size: 500%;
+    color: gainsboro;
+    text-align: center;
+    margin: 50px 0 0 -60px;
+}
+
+/*
+---------------------------
+ Form
+---------------------------
+*/
+
+#input-weight,
+#input-height {
+    width: 80px;
+    height: 20px;
+    margin: 5px;
+}
+
+#button {
+    height: 40px;
+    width: 100px;
+}
+
+/*
+---------------------------
+ Graphics
+---------------------------
+*/
+
+#indicator-background {
+    position: absolute;
+    z-index:1;
+}
+
+#indicator-arrow-horizontal {
+    width: 110px;
+    margin: 110px 0px 0px 40px;
+    position: fixed;
+    z-index:2;
+}
